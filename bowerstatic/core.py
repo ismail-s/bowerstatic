@@ -223,7 +223,7 @@ class Component(object):
                  path, name, version, main, dependencies, autoversion):
         self.bower = bower
         self.component_collection = component_collection
-        self.path = path
+        self.path = os.path.normpath(path)
         self.name = name
         self._version = version
         self.main = main
